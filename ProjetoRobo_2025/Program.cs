@@ -32,9 +32,54 @@
             {
                 posicaoRobo[0] -= 1;
             }
-            
 
-            
+
+
+            //o robo vira para a direita
+            if (comando == 'd' && OrientacaoRobo == 'n')
+            {
+                OrientacaoRobo = 'l';
+            }
+
+            else if (comando == 'd' && OrientacaoRobo == 's')
+            {
+                OrientacaoRobo = 'o';
+            }
+
+            else if (comando == 'd' && OrientacaoRobo == 'l')
+            {
+                OrientacaoRobo = 's';
+            }
+
+            else if (comando == 'd' && OrientacaoRobo == 'o')
+            {
+                OrientacaoRobo = 'n';
+            }
+
+
+            //o robo vira para a esquerda 
+            if (comando == 'e' && OrientacaoRobo == 'n')
+            {
+                OrientacaoRobo = 'o';
+            }
+
+
+            else if (comando == 'e' && OrientacaoRobo == 's')
+            {
+                OrientacaoRobo = 'l';
+            }
+
+            else if (comando == 'e' && OrientacaoRobo == 'l')
+            {
+                OrientacaoRobo = 'n';
+            }
+
+            else if (comando == 'e' && OrientacaoRobo == 'o')
+            {
+                OrientacaoRobo = 's';
+            }
+
+           
 
 
         }
