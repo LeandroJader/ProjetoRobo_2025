@@ -9,9 +9,7 @@
             int[] posicaoRobo = [1, 2];
             char OrientacaoRobo = 'n';
 
-            Console.WriteLine("informe as coordenadas que deseja passar para o robo");
-
-            char [] comando = Console.ReadLine()!.ToLower().ToCharArray();
+           char[] comando = funcoesRobo.coordenadasRobo();
 
 
             //movimento para frente olhando ao norte
@@ -19,26 +17,25 @@
             foreach (char i in comando)
             {
 
-                if (i == 'm' && OrientacaoRobo == 'n')
+                if (i == 'm' )
                 {
-                    posicaoRobo[1] += 1;
+                    funcoesRobo.MovimentarRobo(OrientacaoRobo,posicaoRobo);
                 }
                 // movimento para trás
-                else if (i == 'm' && OrientacaoRobo == 's')
+                else if (i == 'm')
                 {
-                    posicaoRobo[1] -= 1;
+                    funcoesRobo.MovimentarRobo(OrientacaoRobo, posicaoRobo);
                 }
                 // o robo anda para a direita
-                else if (i == 'm' && OrientacaoRobo == 'l')
+                else if (i == 'm' )
                 {
-                    posicaoRobo[0] += 1;
+                    funcoesRobo.MovimentarRobo(OrientacaoRobo, posicaoRobo);
                 }
                 // o robo anda para a esquerda
-                else if (i == 'm' && OrientacaoRobo == 'o')
+                else if (i == 'm' )
                 {
-                    posicaoRobo[0] -= 1;
+                    funcoesRobo.MovimentarRobo(OrientacaoRobo, posicaoRobo);
                 }
-
 
 
                 //o robo vira para a direita
