@@ -4,9 +4,66 @@ using System.Security.Cryptography.X509Certificates;
 namespace ProjetoRobo_2025;
 public class funcoesRobo
 {
+    
+    public static int [] posicaoInicialRobo()
+    {
+        bool validacao = true;
+        int[] posicaoInicialRobo = new int[2];
+        while (validacao == true)
+        {
+            Console.WriteLine("insira a posiçao inicial do robo");
+
+            for (int i = 2; i <= posicaoInicialRobo.Length; i++)
+            {
+                posicaoInicialRobo[0] = Convert.ToInt32(Console.ReadLine());
+                if (posicaoInicialRobo[0] > 5)
+                {
+                    Console.WriteLine("a posição do robo deve estar dentro do limite de 5x5, insira novamente");
+                    continue;
+                }
+
+                Console.WriteLine("insira a proxima posição");
+                posicaoInicialRobo[1] = Convert.ToInt32(Console.ReadLine());
+                if (posicaoInicialRobo[1] > 5)
+                {
+                    Console.WriteLine("a posição do robo deve estar dentro do limite de 5x5, insira novamente");
+                    continue;
+                }
+                else
+                {
+                    validacao = false;
+                }
+            }
+            
+            
+        }
+        return posicaoInicialRobo;
+    }
+    public static void  OrientacaoAtualRobo()
+    {
+        char orientacaoAtual;
+        bool validacao = true;
+        while (validacao == true)
+        {
+           orientacaoAtual = Convert.ToChar(Console.ReadLine().ToLower());
+            if (orientacaoAtual != 'n' || orientacaoAtual != 's' || orientacaoAtual != 'l' || orientacaoAtual != 'o')
+            {
+                Console.WriteLine("O comando nao responde a nenhuma orientação tente usar N,S,L,O");
+                continue;
+            }
+            else
+            {
+                validacao = false;
+            }
+        }
+            
+    }
+
+
 
     public static char[] coordenadasRobo()
     {
+
         Console.WriteLine("informe as coordenadas que deseja passar para o robo");
 
         char[] comando = Console.ReadLine()!.ToLower().ToCharArray();
@@ -16,7 +73,8 @@ public class funcoesRobo
     public static void MovimentoRobo(char[] comando, int[] posicaoRobo, char OrientacaoRobo)
 
     {
-
+        
+        
         foreach (char i in comando)
         {
 
@@ -86,10 +144,15 @@ public class funcoesRobo
                 OrientacaoRobo = 's';
             }
         }
+    
+     
+        
     }
+  
+    
     public static void MostrarPosicionamentoRobo(int[] posicaoRobo, char OrientacaoRobo)
     {
-
+        Console.WriteLine();
         Console.WriteLine($"o robo esta na posição x{posicaoRobo[0]} {posicaoRobo[1]}y olhando para :{OrientacaoRobo}");
         Console.ReadLine();
 
