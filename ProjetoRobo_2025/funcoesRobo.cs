@@ -89,11 +89,13 @@ public class funcoesRobo
 
     public static char[] coordenadasRobo()
     {
-
+        Console.WriteLine("----------------------------------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("informe as coordenadas que deseja passar para o robo");
+        Console.ResetColor();
         Console.WriteLine("----------------------------------------------------------------------------------");
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("M para andar frente E para virar 90 graus para esquerda e D 90 Graus para direita")
+        Console.WriteLine("M para andar frente E para virar 90 graus para esquerda e D 90 Graus para direita");
         Console.ResetColor();
         Console.WriteLine("----------------------------------------------------------------------------------");
         char[] comando = Console.ReadLine()!.ToLower().ToCharArray();
