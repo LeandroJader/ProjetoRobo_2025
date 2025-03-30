@@ -11,9 +11,9 @@ internal class Program
         bool validacao = true;
         while (validacao == true)
         {
-
+      
             int[] posicaoRobo = funcoesRobo.posicaoInicialRobo();
-            char OrientacaoRobo = 'l';
+            char OrientacaoRobo = funcoesRobo.OrientacaoAtualRobo();
             int[] PosicaoRobo2 = [3, 3];
             char orientacaoRobo2 = 'l';
 

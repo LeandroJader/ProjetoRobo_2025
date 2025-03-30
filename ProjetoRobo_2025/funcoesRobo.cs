@@ -39,14 +39,15 @@ public class funcoesRobo
         }
         return posicaoInicialRobo;
     }
-    public static void  OrientacaoAtualRobo()
+    public static char OrientacaoAtualRobo()
     {
-        char orientacaoAtual;
         bool validacao = true;
+        char orientacaoAtual=' ';
         while (validacao == true)
         {
+            Console.WriteLine("insira a orientação atual N,S,L,O");
            orientacaoAtual = Convert.ToChar(Console.ReadLine().ToLower());
-            if (orientacaoAtual != 'n' || orientacaoAtual != 's' || orientacaoAtual != 'l' || orientacaoAtual != 'o')
+            if (orientacaoAtual != 'n' && orientacaoAtual != 's' && orientacaoAtual != 'l' && orientacaoAtual != 'o')
             {
                 Console.WriteLine("O comando nao responde a nenhuma orientação tente usar N,S,L,O");
                 continue;
@@ -56,7 +57,7 @@ public class funcoesRobo
                 validacao = false;
             }
         }
-            
+        return orientacaoAtual;
     }
 
 
