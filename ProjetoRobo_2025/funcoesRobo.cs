@@ -1,9 +1,28 @@
-﻿
-using System.Security.Cryptography.X509Certificates;
-
-namespace ProjetoRobo_2025;
+﻿namespace ProjetoRobo_2025;
 public class funcoesRobo
 {
+
+    public static void cabecalhoProjetoRobo()
+    {
+        Console.WriteLine("-----------------");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Projeto Robo_2025");
+        Console.ResetColor();
+        Console.WriteLine("-----------------");
+    }
+
+    public static void cabecalhoSegundoRobo()
+    {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Passe as informações do segundo robo");
+        Console.ResetColor();
+        Console.WriteLine("--------------------------------------");
+        Console.WriteLine();
+    }
+
+
+
     
     public static int [] posicaoInicialRobo()
     {
@@ -18,7 +37,9 @@ public class funcoesRobo
                 posicaoInicialRobo[0] = Convert.ToInt32(Console.ReadLine());
                 if (posicaoInicialRobo[0] > 5)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("a posição do robo deve estar dentro do limite de 5x5, insira novamente");
+                    Console.ResetColor();
                     continue;
                 }
 
@@ -26,7 +47,9 @@ public class funcoesRobo
                 posicaoInicialRobo[1] = Convert.ToInt32(Console.ReadLine());
                 if (posicaoInicialRobo[1] > 5)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("a posição do robo deve estar dentro do limite de 5x5, insira novamente");
+                    Console.ResetColor();
                     continue;
                 }
                 else
@@ -49,7 +72,9 @@ public class funcoesRobo
            orientacaoAtual = Convert.ToChar(Console.ReadLine().ToLower());
             if (orientacaoAtual != 'n' && orientacaoAtual != 's' && orientacaoAtual != 'l' && orientacaoAtual != 'o')
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("O comando nao responde a nenhuma orientação tente usar N,S,L,O");
+                Console.ResetColor();
                 continue;
             }
             else
@@ -66,7 +91,11 @@ public class funcoesRobo
     {
 
         Console.WriteLine("informe as coordenadas que deseja passar para o robo");
-
+        Console.WriteLine("----------------------------------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("M para andar frente E para virar 90 graus para esquerda e D 90 Graus para direita")
+        Console.ResetColor();
+        Console.WriteLine("----------------------------------------------------------------------------------");
         char[] comando = Console.ReadLine()!.ToLower().ToCharArray();
         return comando;
 
@@ -154,15 +183,12 @@ public class funcoesRobo
     public static void MostrarPosicionamentoRobo(int[] posicaoRobo, char OrientacaoRobo)
     {
         Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"o robo esta na posição x{posicaoRobo[0]} {posicaoRobo[1]}y olhando para :{OrientacaoRobo}");
-        Console.ReadLine();
+        Console.ResetColor();
 
     }
-    public static void MostrarPosicionamentoRobo2(int[] posicaoRobo, char OrientacaoRobo)
-    {
-
-    }
-
+    
 
 }
 
