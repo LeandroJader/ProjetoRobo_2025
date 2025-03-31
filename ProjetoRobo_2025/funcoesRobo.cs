@@ -89,18 +89,37 @@ public class funcoesRobo
 
     public static char[] coordenadasRobo()
     {
-        Console.WriteLine("----------------------------------------------------------------------------------");
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("informe as coordenadas que deseja passar para o robo");
-        Console.ResetColor();
-        Console.WriteLine("----------------------------------------------------------------------------------");
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("M para andar frente E para virar 90 graus para esquerda e D 90 Graus para direita");
-        Console.ResetColor();
-        Console.WriteLine("----------------------------------------------------------------------------------");
-        char[] comando = Console.ReadLine()!.ToLower().ToCharArray();
-        return comando;
-
+        char[] comando = [];
+        bool validacaocoordenadas= true;
+        while (validacaocoordenadas == true) {
+            Console.WriteLine("----------------------------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("informe as coordenadas que deseja passar para o robo");
+            Console.ResetColor();
+            Console.WriteLine("----------------------------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("M para andar frente E para virar 90 graus para esquerda e D 90 Graus para direita");
+            Console.ResetColor();
+            Console.WriteLine("----------------------------------------------------------------------------------");
+             comando = Console.ReadLine()!.ToLower().ToCharArray();
+            
+            if (comando.All(c => c == 'm' || c == 'e' || c == 'd'))
+            {
+                validacaocoordenadas = false;
+                        
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("--------------------------");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Insira coordenadas válidas");
+                Console.ResetColor();
+                Console.WriteLine("--------------------------");
+                continue;
+            }
+        }
+                return comando;
     }
     public static void MovimentoRobo(char[] comando, int[] posicaoRobo, char OrientacaoRobo)
 
@@ -188,7 +207,7 @@ public class funcoesRobo
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"o robo esta na posição x{posicaoRobo[0]} {posicaoRobo[1]}y olhando para :{OrientacaoRobo}");
         Console.ResetColor();
-
+        
     }
     
 
