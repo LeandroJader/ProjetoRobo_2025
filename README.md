@@ -6,15 +6,15 @@
 Desenvolvido durante o curso Fullstack da [Academia do Programador](https://www.academiadoprogramador.net) 2025
 
 ## Entradas 
-**Solicitação da posição inicial:** O programa solicita que o usuário informe a posição atual do robô, inserindo um número por vez.
+**SolicitaÃ§Ã£o da posiÃ§Ã£o inicial:** O programa solicita que o usuÃ¡rio informe a posiÃ§Ã£o atual do robÃ´, inserindo um nÃºmero por vez.
 
-**Validação da posição:** Caso as informações sejam válidas, o programa prossegue para a próxima etapa.
+**ValidaÃ§Ã£o da posiÃ§Ã£o:** Caso as informaÃ§Ãµes sejam vÃ¡lidas, o programa prossegue para a prÃ³xima etapa.
 
-**Solicitação da orientação inicial:** O usuário deve informar para qual direção o robô está olhando inicialmente (Norte, Sul, Leste ou Oeste).
+**SolicitaÃ§Ã£o da orientaÃ§Ã£o inicial:** O usuÃ¡rio deve informar para qual direÃ§Ã£o o robÃ´ estÃ¡ olhando inicialmente (Norte, Sul, Leste ou Oeste).
 
-**Solicitação dos comandos:** O programa pede que o usuário insira a sequência de comandos para movimentar o robô:
+**SolicitaÃ§Ã£o dos comandos:** O programa pede que o usuÃ¡rio insira a sequÃªncia de comandos para movimentar o robÃ´:
 
-* M: Avança uma posição na direção em que está orientado.
+* M: AvanÃ§a uma posiÃ§Ã£o na direÃ§Ã£o em que estÃ¡ orientado.
 
 * E: Gira 90 graus para a esquerda.
 
@@ -22,45 +22,45 @@ Desenvolvido durante o curso Fullstack da [Academia do Programador](https://www.
 
 ## Detalhes 
 
-Este projeto envolve dois robôs que se movimentam em uma área de 5x5 
-seguindo instruções específicas. Cada robô pode receber diferentes comandos que os 
+Este projeto envolve dois robÃ´s que se movimentam em uma Ã¡rea de 5x5 
+seguindo instruÃ§Ãµes especÃ­ficas.
 
 
 
 ## funcionalidades 
 
-**Solicitação de entrada de dados do usuário:** O programa solicita ao usuário que informe as coordenadas iniciais do robô e a orientação para a qual ele estará voltado.
+**SolicitaÃ§Ã£o de entrada de dados do usuÃ¡rio:** O programa solicita ao usuÃ¡rio que informe as coordenadas iniciais do robÃ´ e a orientaÃ§Ã£o para a qual ele estarÃ¡ voltado.
 
-**Realização de validação de dados do usuário:** O programa verifica se as entradas do usuário são válidas. Caso ele digite um comando inicial que posicione o robô fora da área permitida (5x5), o programa exibirá uma mensagem em vermelho informando que o robô está fora dos parâmetros e que a posição deve estar dentro dos limites da grade 5x5.
+**RealizaÃ§Ã£o de validaÃ§Ã£o de dados do usuÃ¡rio:** O programa verifica se as entradas do usuÃ¡rio sÃ£o vÃ¡lidas. Caso ele digite um comando inicial que posicione o robÃ´ fora da Ã¡rea permitida (5x5), o programa exibirÃ¡ uma mensagem em vermelho informando que o robÃ´ estÃ¡ fora dos parÃ¢metros e que a posiÃ§Ã£o deve estar dentro dos limites da grade 5x5.
 
-**Atualização da posição dos robôs:** O programa valida as entradas do usuário e atualiza a posição do robô conforme os comandos inseridos. Por exemplo, se o robô estiver na posição x0, y0 voltado para o norte e receber o comando M, sua posição y será atualizada para 1, resultando na nova posição x0, y1.
+**AtualizaÃ§Ã£o da posiÃ§Ã£o dos robÃ´s:** O programa valida as entradas do usuÃ¡rio e atualiza a posiÃ§Ã£o do robÃ´ conforme os comandos inseridos. Por exemplo, se o robÃ´ estiver na posiÃ§Ã£o x0, y0 voltado para o norte e receber o comando M, sua posiÃ§Ã£o y serÃ¡ atualizada para 1, resultando na nova posiÃ§Ã£o x0, y1.
 
-**Verificação de posicionamento final do robô:** O programa verifica se o robô permanece dentro da área válida de 5x5 após a execução dos comandos. Caso o robô ultrapasse os limites, o usuário será informado e deverá fornecer novas coordenadas para reposicioná-lo dentro da área permitida.
+**VerificaÃ§Ã£o de posicionamento final do robÃ´:** O programa verifica se o robÃ´ permanece dentro da Ã¡rea vÃ¡lida de 5x5 apÃ³s a execuÃ§Ã£o dos comandos. Caso o robÃ´ ultrapasse os limites, o usuÃ¡rio serÃ¡ informado e deverÃ¡ fornecer novas coordenadas para reposicionÃ¡-lo dentro da Ã¡rea permitida.
 
-**Feedback de retorno:** O programa fornece um feedback textual sobre o posicionamento do robô diretamente no terminal após a execução dos comandos principais. Ao finalizar as instruções do primeiro robô, o usuário receberá a posição final exibida no terminal. Em seguida, o processo se repetirá para o segundo robô, que só iniciará após todas as etapas do primeiro terem sido concluídas.
+**Feedback de retorno:** O programa fornece um feedback textual sobre o posicionamento do robÃ´ diretamente no terminal apÃ³s a execuÃ§Ã£o dos comandos principais. Ao finalizar as instruÃ§Ãµes do primeiro robÃ´, o usuÃ¡rio receberÃ¡ a posiÃ§Ã£o final exibida no terminal. Em seguida, o processo se repetirÃ¡ para o segundo robÃ´, que sÃ³ iniciarÃ¡ apÃ³s todas as etapas do primeiro terem sido concluÃ­das.
 
 ## Requisitos
 
-- .NET SDK (recomendado .NET 8.0 ou superior) para compilação e execução do projeto.
+- .NET SDK (recomendado .NET 8.0 ou superior) para compilaÃ§Ã£o e execuÃ§Ã£o do projeto.
 ---
 ## Como Usar
 
-#### Clone o Repositório
+#### Clone o RepositÃ³rio
 ```
 https://github.com/LeandroJader/ProjetoRobo_2025
 ```
 
-#### Navegue até a pasta raiz da solução
+#### Navegue atÃ© a pasta raiz da soluÃ§Ã£o
 ```
 cd ProjetoRobo_2025_
 ```
 
-#### Restaure as dependências
+#### Restaure as dependÃªncias
 ```
 dotnet restore
 ```
 
-#### Navegue até a pasta do projeto
+#### Navegue atÃ© a pasta do projeto
 ```
 cd cd ProjetoRobo_2025_
 ```
