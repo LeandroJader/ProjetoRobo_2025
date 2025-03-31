@@ -38,7 +38,7 @@ public class funcoesRobo
                 if (posicaoInicialRobo[0] > 5)
                 {
 
-
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("a posição do robo deve estar dentro do limite de 5x5, insira novamente");
                     Console.ResetColor();

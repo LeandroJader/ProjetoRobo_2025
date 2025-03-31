@@ -23,11 +23,13 @@ internal class Program
            OrientacaoRobo= funcoesRobo.MovimentoRobo(comando, posicaoRobo, OrientacaoRobo);
             if (posicaoRobo[0] > 5 || posicaoRobo[1] > 5)
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("o robo esta fora do limite, insira outras coordenadas");
                 Console.ResetColor();
                 continue;
             }
+
             else
             {
                 validacao = false;

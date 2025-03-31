@@ -1,6 +1,6 @@
 # ProjetoRobo_2025
 
-
+![]( https://imgur.com/rozsGBp.gif )
 ## Projeto
 
 Desenvolvido durante o curso Fullstack da [Academia do Programador](https://www.academiadoprogramador.net) 2025
@@ -38,3 +38,34 @@ seguindo instruções específicas. Cada robô pode receber diferentes comandos que 
 **Verificação de posicionamento final do robô:** O programa verifica se o robô permanece dentro da área válida de 5x5 após a execução dos comandos. Caso o robô ultrapasse os limites, o usuário será informado e deverá fornecer novas coordenadas para reposicioná-lo dentro da área permitida.
 
 **Feedback de retorno:** O programa fornece um feedback textual sobre o posicionamento do robô diretamente no terminal após a execução dos comandos principais. Ao finalizar as instruções do primeiro robô, o usuário receberá a posição final exibida no terminal. Em seguida, o processo se repetirá para o segundo robô, que só iniciará após todas as etapas do primeiro terem sido concluídas.
+
+## Requisitos
+
+- .NET SDK (recomendado .NET 8.0 ou superior) para compilação e execução do projeto.
+---
+## Como Usar
+
+#### Clone o Repositório
+```
+https://github.com/LeandroJader/ProjetoRobo_2025
+```
+
+#### Navegue até a pasta raiz da solução
+```
+cd ProjetoRobo_2025_
+```
+
+#### Restaure as dependências
+```
+dotnet restore
+```
+
+#### Navegue até a pasta do projeto
+```
+cd cd ProjetoRobo_2025_
+```
+
+#### Execute o projeto
+```
+dotnet run
+```
