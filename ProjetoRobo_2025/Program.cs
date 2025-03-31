@@ -20,7 +20,7 @@ internal class Program
 
 
 
-            funcoesRobo.MovimentoRobo(comando, posicaoRobo, OrientacaoRobo);
+           OrientacaoRobo= funcoesRobo.MovimentoRobo(comando, posicaoRobo, OrientacaoRobo);
             if (posicaoRobo[0] > 5 || posicaoRobo[1] > 5)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -34,8 +34,11 @@ internal class Program
             }
 
             funcoesRobo.MostrarPosicionamentoRobo(posicaoRobo, OrientacaoRobo);
+            Console.WriteLine();
 
             Console.WriteLine("aperte ENTER para útilizar o robo 2"); Console.ReadLine();
+            Console.WriteLine();
+
             funcoesRobo.cabecalhoSegundoRobo();
 
             int[] PosicaoRobo2 = funcoesRobo.posicaoInicialRobo();
@@ -46,7 +49,7 @@ internal class Program
             Console.WriteLine();
             char[] comandoRobo2 = funcoesRobo.coordenadasRobo();
 
-            funcoesRobo.MovimentoRobo(comandoRobo2, PosicaoRobo2, orientacaoRobo2);
+            orientacaoRobo2= funcoesRobo.MovimentoRobo(comandoRobo2, PosicaoRobo2, orientacaoRobo2);
             funcoesRobo.MostrarPosicionamentoRobo(PosicaoRobo2, orientacaoRobo2);
             Console.ReadLine();
         }
